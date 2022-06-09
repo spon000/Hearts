@@ -1,7 +1,7 @@
 import random
 from BaseClass import BaseClass
 from Card import Card, StandardPlayingCard
-
+ 
 
 class CardPile(BaseClass):
     TOP = -1

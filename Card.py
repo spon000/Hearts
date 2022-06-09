@@ -1,5 +1,5 @@
 from BaseClass import BaseClass
-
+ 
 ### Card Class
 class Card(BaseClass):
     def __init__(self, kwargs = {}):
