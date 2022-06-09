@@ -1,94 +1,97 @@
-running game...
-running round...
-dealing hand...
-Deck length = 52
+root - DEBUG - Testing logging...
+root - INFO - starting game...
+root - DEBUG - running game...
+root - DEBUG - starting round...
+root - DEBUG - dealing hand...
+root - DEBUG - Deck length = 52
 Cards to Deal = 13
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 48
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 48
 Cards to Deal = 12
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 44
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 44
 Cards to Deal = 11
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 40
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 40
 Cards to Deal = 10
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 36
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 36
 Cards to Deal = 9
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 32
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 32
 Cards to Deal = 8
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 28
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 28
 Cards to Deal = 7
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 24
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 24
 Cards to Deal = 6
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 20
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 20
 Cards to Deal = 5
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 16
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 16
 Cards to Deal = 4
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 12
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 12
 Cards to Deal = 3
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 8
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 8
 Cards to Deal = 2
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
-Deck length = 4
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - Deck length = 4
 Cards to Deal = 1
-dealing cards...
-Deal card to player_1
-Deal card to player_2
-Deal card to player_3
-Deal card to player_4
+root - DEBUG - dealing cards...
+root - DEBUG - Deal card to player_1
+root - DEBUG - Deal card to player_2
+root - DEBUG - Deal card to player_3
+root - DEBUG - Deal card to player_4
+root - DEBUG - running round...
