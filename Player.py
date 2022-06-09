@@ -1,6 +1,6 @@
 from BaseClass import BaseClass
 from CardPile import CardPile, StandardPlayingCardPile
-
+ 
 class Player(BaseClass):
     PLAYER_STATE = {
         "starting" : 0,

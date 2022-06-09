@@ -1,6 +1,6 @@
 # This class is never instatiated by itself. It is always inherited 
 # Used to set up inheriting classes with standard class methods and properties.
-
+ 
 class BaseClass:
     # Constructor
     def __init__(self, kwargs = {}):
