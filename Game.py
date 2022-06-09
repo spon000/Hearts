@@ -1,3 +1,5 @@
+import logging
+
 from BaseClass import BaseClass
 from Player import Player, HeartsPlayer
 from Round import Round, HeartsRound
@@ -8,7 +10,7 @@ class Game(BaseClass):
         "COUNTER_CLOCKWISE": 1
     }
 
-    STATE = {
+    GAME_STATE = {
         "init" : 0,
         "starting" : 1,
         "running": 2,
@@ -25,7 +27,7 @@ class Game(BaseClass):
         self._game_id = 1
         self.players = []
         self.rounds = []
-        self._game_state = self.STATE['init']
+        self._game_state = self.GAME_STATE['init']
         self._current_round = 0
         self.max_players = 4
         self.set_parms(kwargs)
@@ -77,7 +79,7 @@ class Hearts(Game):
         super().__init__(kwargs)
         self._round_class = HeartsRound
         self._player_class = HeartsPlayer
-        self.winning_score = 2000
+        self.losing_score = 200
         self.game_variant = self.VARIANT['STANDARD']
         self._passing = [self.PASS['RIGHT'], self.PASS['LEFT'], self.PASS['ACROSS'], self.PASS['NONE']]
         
@@ -90,17 +92,38 @@ class Hearts(Game):
     def shift_pass_type(self):
         self._passing.append(self._passing.pop(0))
 
+    def check_game_over(self):
+        for player in self.players:
+
+            if player.score >= self.losing_score:
+                return True
+
+        return False
+
+
     def start(self):
-        self.state = self.STATE['starting']
+        logging.info("starting game...")
+        self.state = self.GAME_STATE['starting']
         self.add_round(self._round_class(self.players, self._passing[0]))
-        self.state = self.STATE['running']
+        self.state = self.GAME_STATE['running']
         self.run()
         return
 
     def run(self):
-        print("running game...")
-        # while self.state == self.STATE['running']:
-        self.rounds[-1].start()
+        logging.debug("running game...")
+
+        while self.state == self.GAME_STATE['running']:
+            self.rounds[-1].start()
+
+            if self.check_game_over():
+                self.state = self.GAME_STATE ['ending']
+            
+        self.end()
+
+    def end(self):
+        logging.info("ending game...")
+        return
+
         
 
 

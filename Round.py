@@ -1,3 +1,5 @@
+import logging
+
 from BaseClass import BaseClass
 from CardPile import CardPile, StandardPlayingCardPile
 from Card import Card, StandardPlayingCard
@@ -18,11 +20,11 @@ class Round(BaseClass):
 
     def __init__(self, players, kwargs = {}):
         super().__init__(kwargs)
-        self._round_state = self.ROUND_STATE["init"]
+        self.state = self.ROUND_STATE["init"]
         self._card_pile_class = CardPile
         self._card_class = Card
         self.players = players
-        self.deck = None                         # CardPile Object
+        self.deck = CardPile
         self.table_cards = CardPile
         self.played_cards = CardPile                 # CardPile Object
         self.round_number = 0
@@ -31,9 +33,10 @@ class Round(BaseClass):
         return
 
     def deal_cards(self):
-        print("dealing cards...")
+        logging.debug("dealing cards...")
+
         for player in self.players:
-            print(f"Deal card to {player.name}")
+            logging.debug(f"Deal card to {player.name}")
             if len(self.deck) > 0:  
                 player.hand.add_cards(self.deck.draw_cards())
             else:
@@ -41,12 +44,13 @@ class Round(BaseClass):
         return 
 
     def deal_hand(self, shuffle = False, cards_per_player = 1):
-        print("dealing hand...")
+        logging.debug("dealing hand...")
+
         if shuffle:
             self.deck.shuffle()
 
         while cards_per_player > 0 and len(self.deck) > 0:
-            print(f"Deck length = {len(self.deck)}\nCards to Deal = {cards_per_player}")
+            logging.debug(f"Deck length = {len(self.deck)}\nCards to Deal = {cards_per_player}")
             self.deal_cards()
             cards_per_player -= 1
         return
@@ -73,19 +77,31 @@ class HeartsRound(Round):
         return
 
     def start(self):
-        print("running round...")
-        self._round_state = self.ROUND_STATE['dealing']
+        logging.debug("starting round...")
+        self.state = self.ROUND_STATE['dealing']
         self.deal_hand(shuffle = True, cards_per_player = int(StandardPlayingCardPile.FULL_DECK / len(self.players)))
         # print(f"cards = {self.players[0].hand.clone_cards()}")
-        self._round_state = self.ROUND_STATE['passing']
+        self.state = self.ROUND_STATE['passing']
         self.determine_first_player()
-        self._round_state = self.ROUND_STATE['playing']
+        self.state = self.ROUND_STATE['playing']
         self.run()
 
         return
 
     def run(self):
-        trick = HeartsTrick()
+        logging.debug("running round...")
+
+        while self.state == self.ROUND_STATE['playing']:
+
+            for player in self.players:
+                self.get_legal_move(player)
+
+            trick = HeartsTrick()
+
+            if len(self.players[0].hand) <= 0:
+                self.state = self.ROUND_STATE['ending']
+
+        self.end()        
         return
 
     def determine_first_player(self):
@@ -93,17 +109,17 @@ class HeartsRound(Round):
         return
 
     def get_legal_move(self, player):
-        if self.round_state == self.ROUND_STATE['passing']:
+        if self.state == self.ROUND_STATE['passing']:
             return 
 
-        # if self.round_state == self.ROUND_STATE['playing']:
-
-
         return
 
-    def get_pass_cards(self):
+    def pass_cards(self, cards = StandardPlayingCardPile()):
         return
 
+    def calculate_current_score(self):
+        return
 
     def end(self):
+        logging.debug("ending round...")
         return

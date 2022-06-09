@@ -1,22 +1,29 @@
-from MonteCarloTreeSearchNode import MonteCarloTreeSearchNode as MCTSN
+import sys, codecs, logging
+
 from Game import Hearts
 
-import sys, codecs
+logging.basicConfig(filename="log.txt", filemode="w", encoding = "utf 8", level = logging.DEBUG, format = "%(name)s - %(levelname)s - %(message)s")
+logging.basicConfig()
 
-stdoutOrigin=sys.stdout 
-sys.stdout = codecs.open("log.txt", "w", "utf-8")
+# stdoutOrigin=sys.stdout 
+# sys.stdout = codecs.open("log.txt", "w", "utf-8")
 
 # from players import player_data
 # from cards import card_data
+def main():
 
-game_of_hearts = Hearts({'winning_score': 1000})
+    game_of_hearts = Hearts({'losing_score': 0})
 
-for index in range(1, game_of_hearts.max_players + 1):
-    game_of_hearts.add_player({
-       'name': f"player_{index}"
-    })
+    for index in range(1, game_of_hearts.max_players + 1):
+        game_of_hearts.add_player({
+        'name': f"player_{index}"
+        })
 
-game_of_hearts.start()
+    logging.debug("Testing logging...")
+
+    game_of_hearts.start()
+    return
+
 # print(game_of_hearts)
 
 
@@ -114,16 +121,16 @@ game_of_hearts.start()
 
 
             
-def main():
+# def main():
 #     # print(os.linesep.join(cards))
 #     init_game()
 #     init_round()
 #     play_round()
 #     print(game)
 
-    sys.stdout.close()
-    sys.stdout=stdoutOrigin
-    pass
+    # sys.stdout.close()
+    # sys.stdout=stdoutOrigin
+    # pass
 
 
 #     # root = MCTSN(state = game)

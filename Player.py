@@ -31,6 +31,7 @@ class HeartsPlayer(Player):
         super().__init__(kwargs)
         self.hand = StandardPlayingCardPile()
         self.tricks = StandardPlayingCardPile()
+        self.legal_card_plays = StandardPlayingCardPile()
         self.set_parms(kwargs)
         return
 
