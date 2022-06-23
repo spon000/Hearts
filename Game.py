@@ -19,23 +19,22 @@ class Game(BaseClass):
         "finished": 5
     }
 
-    def __init__(self, kwargs = {}):
-        super().__init__(kwargs)
+    def __init__(self, **kwargs):
         self._total_players = 0
-        self._round_class = Round
-        self._player_class = Player
-        self._game_id = 1
+        # self._round_class = Round
+        # self._player_class = Player
+        self.game_id = 1
         self.players = []
         self.rounds = []
         self._game_state = self.GAME_STATE['init']
         self._current_round = 0
         self.max_players = 4
-        self.set_parms(kwargs)
-        return 
+        super().__init__(**kwargs)
 
-    def add_player(self, kwargs = {}):
+    def add_player(self, player):
         if len(self.players) <= self.max_players:
-            self.players.extend([self._player_class(kwargs)])
+            self.players.extend([player])
+            # self.players.extend([self._player_class(kwargs)])
         return
 
     def add_round(self, round):
@@ -75,10 +74,9 @@ class Hearts(Game):
         'NONE': 3
     }    
 
-    def __init__(self, kwargs = {}):
-        super().__init__(kwargs)
-        self._round_class = HeartsRound
-        self._player_class = HeartsPlayer
+    def __init__(self, **kwargs):
+        # self._round_class = HeartsRound
+        # self._player_class = HeartsPlayer
         self.losing_score = 200
         self.game_variant = self.VARIANT['STANDARD']
         self._passing = [self.PASS['RIGHT'], self.PASS['LEFT'], self.PASS['ACROSS'], self.PASS['NONE']]
@@ -86,8 +84,9 @@ class Hearts(Game):
         if self.game_variant == self.VARIANT['STANDARD']:
             self.max_players = 4
         
-        self.set_parms(kwargs)
-        return 
+        super().__init__(**kwargs)
+        logging.debug(f"game_id = {self.game_id}")
+        
 
     def shift_pass_type(self):
         self._passing.append(self._passing.pop(0))
@@ -101,28 +100,28 @@ class Hearts(Game):
         return False
 
 
-    def start(self):
-        logging.info("starting game...")
-        self.state = self.GAME_STATE['starting']
-        self.add_round(self._round_class(self.players, self._passing[0]))
-        self.state = self.GAME_STATE['running']
-        self.run()
-        return
+    # def start(self):
+    #     logging.info("starting game...")
+    #     self.state = self.GAME_STATE['starting']
+    #     self.add_round(self._round_class(self.players, self._passing[0]))
+    #     self.state = self.GAME_STATE['running']
+    #     self.run()
+    #     return
 
-    def run(self):
-        logging.debug("running game...")
+    # def run(self):
+    #     logging.debug("running game...")
 
-        while self.state == self.GAME_STATE['running']:
-            self.rounds[-1].start()
+    #     while self.state == self.GAME_STATE['running']:
+    #         self.rounds[-1].start()
 
-            if self.check_game_over():
-                self.state = self.GAME_STATE ['ending']
+    #         if self.check_game_over():
+    #             self.state = self.GAME_STATE['ending']
             
-        self.end()
+    #     self.end()
 
-    def end(self):
-        logging.info("ending game...")
-        return
+    # def end(self):
+    #     logging.info("ending game...")
+    #     return
 
         
 

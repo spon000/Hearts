@@ -1,98 +1,121 @@
-root - DEBUG - Testing logging...
-root - INFO - starting game...
-root - DEBUG - running game...
-root - DEBUG - starting round...
-root - DEBUG - dealing hand...
-root - DEBUG - Deck length = 52
-Cards to Deal = 13
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 48
-Cards to Deal = 12
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 44
-Cards to Deal = 11
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 40
-Cards to Deal = 10
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 36
-Cards to Deal = 9
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 32
-Cards to Deal = 8
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 28
-Cards to Deal = 7
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 24
-Cards to Deal = 6
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 20
-Cards to Deal = 5
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 16
-Cards to Deal = 4
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 12
-Cards to Deal = 3
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 8
-Cards to Deal = 2
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - Deck length = 4
-Cards to Deal = 1
-root - DEBUG - dealing cards...
-root - DEBUG - Deal card to player_1
-root - DEBUG - Deal card to player_2
-root - DEBUG - Deal card to player_3
-root - DEBUG - Deal card to player_4
-root - DEBUG - running round...
- 
+2022-06-23 14:49:35,168: root - DEBUG
+game_id = 2
+2022-06-23 14:49:35,168: root - DEBUG
+Starting "hearts"...
+2022-06-23 14:49:35,169: root - DEBUG
+Hearts = 
+Class Name: Hearts
+	 attribute(<class 'int'>) <losing_score : 0>
+	 attribute(<class 'int'>) <game_variant : 0>
+	 attribute(<class 'list'>) <_passing : [0, 1, 2, 3]>
+	 attribute(<class 'int'>) <max_players : 4>
+	 attribute(<class 'int'>) <_total_players : 0>
+	 attribute(<class 'int'>) <game_id : 2>
+	 attribute(<class 'list'>) <players : [
+Class Name: HeartsPlayer
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'int'>) <_player_state : 0>
+	 attribute(<class 'int'>) <_player_id : 0>
+	 attribute(<class 'str'>) <name : player_1>
+	 attribute(<class 'int'>) <p_type : 0>
+	 attribute(<class 'int'>) <score : 0>, 
+Class Name: HeartsPlayer
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'int'>) <_player_state : 0>
+	 attribute(<class 'int'>) <_player_id : 0>
+	 attribute(<class 'str'>) <name : player_2>
+	 attribute(<class 'int'>) <p_type : 0>
+	 attribute(<class 'int'>) <score : 0>, 
+Class Name: HeartsPlayer
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'int'>) <_player_state : 0>
+	 attribute(<class 'int'>) <_player_id : 0>
+	 attribute(<class 'str'>) <name : player_3>
+	 attribute(<class 'int'>) <p_type : 0>
+	 attribute(<class 'int'>) <score : 0>, 
+Class Name: HeartsPlayer
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+Class Name: StandardPlayingCardPile
+	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'list'>) <cards : []>
+	 attribute(<class 'int'>) <card_pile_id : 1>>
+	 attribute(<class 'int'>) <_player_state : 0>
+	 attribute(<class 'int'>) <_player_id : 0>
+	 attribute(<class 'str'>) <name : player_4>
+	 attribute(<class 'int'>) <p_type : 0>
+	 attribute(<class 'int'>) <score : 0>]>
+	 attribute(<class 'list'>) <rounds : []>
+	 attribute(<class 'int'>) <_game_state : 0>
+	 attribute(<class 'int'>) <_current_round : 0>

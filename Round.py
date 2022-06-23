@@ -2,6 +2,7 @@ import logging
 
 
 from BaseClass import BaseClass
+from Player import Player
 from CardPile import CardPile, StandardPlayingCardPile
 from Card import Card, StandardPlayingCard
 from Turn import HeartsTrick
@@ -19,19 +20,23 @@ class Round(BaseClass):
         "finished": 5
     }
 
-    def __init__(self, players, kwargs = {}):
-        super().__init__(kwargs)
+    @classmethod
+    def CHANGE_ROUND_PARMS(cls, new_round_parm):
+        cls.ROUND_STATE = new_round_parm
+        return
+
+    def __init__(self, **kwargs):
         self.state = self.ROUND_STATE["init"]
         self._card_pile_class = CardPile
         self._card_class = Card
-        self.players = players
+        self.players = []
         self.deck = CardPile
         self.table_cards = CardPile
         self.played_cards = CardPile                 # CardPile Object
         self.round_number = 0
         self.current_player = 0
-        self.set_parms(kwargs)
-        return
+
+        super().__init__(**kwargs)
 
     def deal_cards(self):
         logging.debug("dealing cards...")
@@ -68,59 +73,57 @@ class HeartsRound(Round):
         'passing': 6
     })
 
-    def __init__(self, players, pass_type, kwargs = {}):
-        super().__init__(players, kwargs)
+    def __init__(self, **kwargs):
         self._card_pile_class = StandardPlayingCardPile
         self._card_class = StandardPlayingCard
-        self._pass_type = pass_type
-        
-        self.set_parms({'deck': StandardPlayingCardPile(make_standard_deck = True)})
-        return
+        self.deck = StandardPlayingCardPile(make_standard_deck = True)
+        self._pass_type = 'NONE'
 
-    def start(self):
-        logging.debug("starting round...")
-        self.state = self.ROUND_STATE['dealing']
-        self.deal_hand(shuffle = True, cards_per_player = int(StandardPlayingCardPile.FULL_DECK / len(self.players)))
-        # print(f"cards = {self.players[0].hand.clone_cards()}")
-        self.state = self.ROUND_STATE['passing']
-        self.determine_first_player()
-        self.state = self.ROUND_STATE['playing']
-        self.run()
+        super().__init__(**kwargs)        
 
-        return
+    # def start(self):
+    #     logging.debug("starting round...")
+    #     self.state = self.ROUND_STATE['dealing']
+    #     self.deal_hand(shuffle = True, cards_per_player = int(StandardPlayingCardPile.FULL_DECK / len(self.players)))
+    #     # print(f"cards = {self.players[0].hand.clone_cards()}")
+    #     self.state = self.ROUND_STATE['passing']
+    #     self.determine_first_player()
+    #     self.state = self.ROUND_STATE['playing']
+    #     self.run()
 
-    def run(self):
-        logging.debug("running round...")
+    #     return
 
-        while self.state == self.ROUND_STATE['playing']:
+    # def run(self):
+    #     logging.debug("running round...")
 
-            for player in self.players:
-                self.get_legal_move(player)
+    #     while self.state == self.ROUND_STATE['playing']:
 
-            trick = HeartsTrick()
+    #         for player in self.players:
+    #             self.get_legal_move(player)
 
-            if len(self.players[0].hand) <= 0:
-                self.state = self.ROUND_STATE['ending']
+    #         trick = HeartsTrick()
 
-        self.end()        
-        return
+    #         if len(self.players[0].hand) <= 0:
+    #             self.state = self.ROUND_STATE['ending']
 
-    def determine_first_player(self):
-        
-        return
+    #     self.end()        
+    #     return
 
-    def get_legal_move(self, player):
-        if self.state == self.ROUND_STATE['passing']:
-            return 
+    # def pass_cards(self, cards = StandardPlayingCardPile()):
+    #     if self._pass_type  != Hearts.PASS['NONE']:
+    #         self.pick_3_cards(3)
+    #     return
 
-        return
+    # def calculate_current_score(self):
+    #     return
 
-    def pass_cards(self, cards = StandardPlayingCardPile()):
-        return
+    # def pick_3_cards(self):
+    #     for player in self.players:
+    #         if player.p_type == ''
 
-    def calculate_current_score(self):
-        return
 
-    def end(self):
-        logging.debug("ending round...")
-        return
+    #     return
+
+    # def end(self):
+    #     logging.debug("ending round...")
+    #     return

@@ -2,14 +2,13 @@ from BaseClass import BaseClass
  
 ### Card Class
 class Card(BaseClass):
-    def __init__(self, kwargs = {}):
-        super().__init__(kwargs)
+    def __init__(self, **kwargs):
         self.card_id = 1
         self.card_name = ""
         self.card_name_abbreviate = ""
         self.card_set = ""
-        self.set_parms(kwargs)
-        return
+
+        super().__init__(**kwargs)
 
 ### PlayingCard inherited from Card
 class StandardPlayingCard(Card):
@@ -89,16 +88,15 @@ class StandardPlayingCard(Card):
     )
     
     # Constructor
-    def __init__(self, kwargs = {}):
-        super().__init__(kwargs)
+    def __init__(self, **kwargs):
         self.card_set = "StandardPlayingCard"  
         self.card_suit = self.SUIT['CLUB']
         self.card_value = self.VALUE['TWO']
         self.card_name = ""
         self.card_name_abbreviate = ""
-        self.set_parms(kwargs)
         self.set_card_name()        
-        return
+
+        super().__init__(**kwargs)
 
     def set_card_name(self):
         self.card_name = self.card_value['name'] + " of " + self.card_suit['name']

@@ -8,13 +8,13 @@ class CardPile(BaseClass):
     BOTTOM = 0
     FULL_DECK = 52
     
-    def __init__(self, kwargs = {}):
-        super().__init__(kwargs)
+    def __init__(self, **kwargs):
         self._card_class = Card
         self.cards = []
         self.card_pile_id = 1
-        self.set_parms(kwargs)
-        return 
+
+        super().__init__(**kwargs)
+        
 
     def __len__(self):
         return len(self.cards)
@@ -70,15 +70,12 @@ class CardPile(BaseClass):
 
 ###
 class StandardPlayingCardPile(CardPile):
-    def __init__(self, make_standard_deck = False, kwargs = {}):
-        super().__init__(kwargs)
+    def __init__(self, make_standard_deck = False, **kwargs):
         self._card_class = StandardPlayingCard
+        super().__init__(**kwargs)
 
         if make_standard_deck:
             self.create_standard_deck()
-            
-        self.set_parms(kwargs)
-        return
 
     def create_standard_deck(self):
         self.cards = [
