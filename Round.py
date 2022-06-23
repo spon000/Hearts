@@ -1,6 +1,5 @@
 import logging
 
-
 from BaseClass import BaseClass
 from Player import Player
 from CardPile import CardPile, StandardPlayingCardPile

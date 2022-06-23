@@ -26,7 +26,7 @@ class Player(BaseClass):
         self._player_id = player_id
         return
 
-        
+
 
 class HeartsPlayer(Player):
     Player.PLAYER_STATE.update({
