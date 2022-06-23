@@ -8,7 +8,7 @@ logging.basicConfig(
     filemode="w", 
     encoding = "utf 8", 
     level = logging.DEBUG, 
-    format = f"%(asctime)s: %(name)s - %(levelname)s\n%(message)s")
+    format = f"%(asctime)s: %(name)s - %(levelname)s\n%(message)s\n")
 # stdoutOrigin=sys.stdout 
 # sys.stdout = codecs.open("log.txt", "w", "utf-8")
 

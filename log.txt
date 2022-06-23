@@ -1,8 +1,10 @@
-2022-06-23 14:49:35,168: root - DEBUG
+2022-06-23 14:58:20,519: root - DEBUG
 game_id = 2
-2022-06-23 14:49:35,168: root - DEBUG
+
+2022-06-23 14:58:20,519: root - DEBUG
 Starting "hearts"...
-2022-06-23 14:49:35,169: root - DEBUG
+
+2022-06-23 14:58:20,519: root - DEBUG
 Hearts = 
 Class Name: Hearts
 	 attribute(<class 'int'>) <losing_score : 0>
@@ -119,3 +121,4 @@ Class Name: StandardPlayingCardPile
 	 attribute(<class 'list'>) <rounds : []>
 	 attribute(<class 'int'>) <_game_state : 0>
 	 attribute(<class 'int'>) <_current_round : 0>
+
