@@ -1,21 +1,18 @@
 import random
-from BaseClass import BaseClass
-from Card import Card, StandardPlayingCard
+from CardGame.BaseClass import BaseClass
+from CardGame.BaseCard import BaseCard, StandardPlayingCard
  
-
-class CardPile(BaseClass):
+class BaseCardPile(BaseClass):
     TOP = -1
     BOTTOM = 0
     FULL_DECK = 52
     
     def __init__(self, **kwargs):
-        self._card_class = Card
+        self._card_class = BaseCard
         self.cards = []
         self.card_pile_id = 1
-
         super().__init__(**kwargs)
         
-
     def __len__(self):
         return len(self.cards)
 
@@ -69,7 +66,7 @@ class CardPile(BaseClass):
         return len(self.cards)
 
 ###
-class StandardPlayingCardPile(CardPile):
+class StandardPlayingCardPile(BaseCardPile):
     def __init__(self, make_standard_deck = False, **kwargs):
         self._card_class = StandardPlayingCard
         super().__init__(**kwargs)

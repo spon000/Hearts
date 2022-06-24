@@ -1,7 +1,6 @@
-from BaseClass import BaseClass
-from CardPile import StandardPlayingCardPile
+from CardGame.BaseClass import BaseClass
  
-class Player(BaseClass):
+class BaseCardPlayer(BaseClass):
     PLAYER_STATE = {
         "starting" : 0,
         "playing" : 1,
@@ -19,7 +18,6 @@ class Player(BaseClass):
         self.name = "player_name"
         self.p_type = self.PLAYER_TYPE['AI']
         self.score = 0
-
         super().__init__(**kwargs)
 
     def assign_id(self, player_id):
@@ -27,17 +25,4 @@ class Player(BaseClass):
         return
 
 
-
-class HeartsPlayer(Player):
-    Player.PLAYER_STATE.update({
-        "passing" : 3,
-    })
-
-    def __init__(self, **kwargs):
-        self.hand = StandardPlayingCardPile()
-        self.tricks = StandardPlayingCardPile()
-        self.pass_cards = StandardPlayingCardPile()
-        self.legal_card_plays = StandardPlayingCardPile()
-
-        super().__init__(**kwargs)
 

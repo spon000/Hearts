@@ -1,17 +1,16 @@
-from BaseClass import BaseClass
+from CardGame.BaseClass import BaseClass
  
 ### Card Class
-class Card(BaseClass):
+class BaseCard(BaseClass):
     def __init__(self, **kwargs):
         self.card_id = 1
         self.card_name = ""
         self.card_name_abbreviate = ""
         self.card_set = ""
-
         super().__init__(**kwargs)
 
 ### PlayingCard inherited from Card
-class StandardPlayingCard(Card):
+class StandardPlayingCard(BaseCard):
     # Class Variables
     SUIT = dict(
         CLUB = {
@@ -95,7 +94,6 @@ class StandardPlayingCard(Card):
         self.card_name = ""
         self.card_name_abbreviate = ""
         self.set_card_name()        
-
         super().__init__(**kwargs)
 
     def set_card_name(self):

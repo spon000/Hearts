@@ -1,38 +1,49 @@
-2022-06-23 14:58:20,519: root - DEBUG
+2022-06-24 11:43:34,762: root - DEBUG
+Starting Main()...
+
+2022-06-24 11:43:34,762: root - DEBUG
 game_id = 2
 
-2022-06-23 14:58:20,519: root - DEBUG
-Starting "hearts"...
+2022-06-24 11:43:34,762: root - DEBUG
+Adding Player: player_1...
 
-2022-06-23 14:58:20,519: root - DEBUG
+2022-06-24 11:43:34,762: root - DEBUG
+Adding Player: player_2...
+
+2022-06-24 11:43:34,762: root - DEBUG
+Adding Player: player_3...
+
+2022-06-24 11:43:34,762: root - DEBUG
+Adding Player: player_4...
+
+2022-06-24 11:43:34,763: root - DEBUG
 Hearts = 
-Class Name: Hearts
+Class Name: HeartsCardGame
 	 attribute(<class 'int'>) <losing_score : 0>
 	 attribute(<class 'int'>) <game_variant : 0>
 	 attribute(<class 'list'>) <_passing : [0, 1, 2, 3]>
-	 attribute(<class 'int'>) <max_players : 4>
 	 attribute(<class 'int'>) <_total_players : 0>
 	 attribute(<class 'int'>) <game_id : 2>
 	 attribute(<class 'list'>) <players : [
-Class Name: HeartsPlayer
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: HeartsCardPlayer
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <hand : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <tricks : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <pass_cards : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <legal_card_plays : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
 	 attribute(<class 'int'>) <_player_state : 0>
@@ -40,25 +51,25 @@ Class Name: StandardPlayingCardPile
 	 attribute(<class 'str'>) <name : player_1>
 	 attribute(<class 'int'>) <p_type : 0>
 	 attribute(<class 'int'>) <score : 0>, 
-Class Name: HeartsPlayer
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: HeartsCardPlayer
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <hand : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <tricks : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <pass_cards : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <legal_card_plays : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
 	 attribute(<class 'int'>) <_player_state : 0>
@@ -66,25 +77,25 @@ Class Name: StandardPlayingCardPile
 	 attribute(<class 'str'>) <name : player_2>
 	 attribute(<class 'int'>) <p_type : 0>
 	 attribute(<class 'int'>) <score : 0>, 
-Class Name: HeartsPlayer
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: HeartsCardPlayer
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <hand : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <tricks : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <pass_cards : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <legal_card_plays : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
 	 attribute(<class 'int'>) <_player_state : 0>
@@ -92,25 +103,25 @@ Class Name: StandardPlayingCardPile
 	 attribute(<class 'str'>) <name : player_3>
 	 attribute(<class 'int'>) <p_type : 0>
 	 attribute(<class 'int'>) <score : 0>, 
-Class Name: HeartsPlayer
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <hand : 
+Class Name: HeartsCardPlayer
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <hand : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <tricks : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <tricks : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <pass_cards : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <pass_cards : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
-	 attribute(<class 'CardPile.StandardPlayingCardPile'>) <legal_card_plays : 
+	 attribute(<class 'CardGame.BaseCardPile.StandardPlayingCardPile'>) <legal_card_plays : 
 Class Name: StandardPlayingCardPile
-	 attribute(<class 'type'>) <_card_class : <class 'Card.Card'>>
+	 attribute(<class 'type'>) <_card_class : <class 'CardGame.BaseCard.BaseCard'>>
 	 attribute(<class 'list'>) <cards : []>
 	 attribute(<class 'int'>) <card_pile_id : 1>>
 	 attribute(<class 'int'>) <_player_state : 0>
@@ -121,4 +132,5 @@ Class Name: StandardPlayingCardPile
 	 attribute(<class 'list'>) <rounds : []>
 	 attribute(<class 'int'>) <_game_state : 0>
 	 attribute(<class 'int'>) <_current_round : 0>
+	 attribute(<class 'int'>) <max_players : 4>
 

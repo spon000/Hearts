@@ -1,32 +1,35 @@
-import sys, codecs, logging
+import logging
 
-from Game import Hearts
-from Player import HeartsPlayer
+from CardGame.HeartsCardGame import HeartsCardGame
+from CardGame.HeartsCardGame import HeartsCardPlayer
+# from CardGame.BaseCardGame import BaseCardGame
+# from CardGame.Card import StandardPlayingCard
+
+
 
 logging.basicConfig(
-    filename="log.txt", 
+    filename="./log.txt", 
     filemode="w", 
     encoding = "utf 8", 
     level = logging.DEBUG, 
-    format = f"%(asctime)s: %(name)s - %(levelname)s\n%(message)s\n")
-# stdoutOrigin=sys.stdout 
-# sys.stdout = codecs.open("log.txt", "w", "utf-8")
+    format = f"%(asctime)s: %(name)s - %(levelname)s\n%(message)s\n"
+)
+# # stdoutOrigin=sys.stdout 
+# # sys.stdout = codecs.open("log.txt", "w", "utf-8")
 
-# from players import player_data
-# from cards import card_data
+# # from players import player_data
+# # from cards import card_data
 def main():
-
-    game_of_hearts = Hearts(losing_score = 0, game_id = 2)
-    logging.debug(f"Starting \"hearts\"...")
+    logging.debug(f"Starting Main()...")
+    game_of_hearts = HeartsCardGame(losing_score = 0, game_id = 2)
 
     for index in range(1, game_of_hearts.max_players + 1):
-        game_of_hearts.add_player(HeartsPlayer(name = f"player_{index}"))
+        game_of_hearts.add_player(HeartsCardPlayer(name = f"player_{index}"))
 
-    
     logging.debug(f"Hearts = {game_of_hearts}")
     
 
-    # game_of_hearts.start()
+#     # game_of_hearts.start()
     return
 
 # print(game_of_hearts)
