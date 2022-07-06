@@ -1,6 +1,7 @@
 import logging
 
 from CardGame.BaseCardGame import BaseCardGame
+# from HeartsCardGame.HeartsCardRound import HeartsCardRound
 
 class HeartsCardGame(BaseCardGame):
     VARIANT = {
@@ -40,11 +41,12 @@ class HeartsCardGame(BaseCardGame):
 
 
     # def start(self):
-    #     logging.info("starting game...")
+    #     logging.info("starting hearts game...")
     #     self.state = self.GAME_STATE['starting']
-    #     self.add_round(self._round_class(self.players, self._passing[0]))
+    #     # self.add_round(self._round_class(self.players, self._passing[0]))
+    #     self.add_round(HeartsCardRound(players = self.players, passing_type = self._passing[0]))
     #     self.state = self.GAME_STATE['running']
-    #     self.run()
+    #     # self.run()
     #     return
 
     # def run(self):

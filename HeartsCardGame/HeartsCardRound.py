@@ -9,10 +9,10 @@ class HeartsCardRound(BaseCardRound):
     })
 
     def __init__(self, **kwargs):
-        self._card_pile_class = StandardPlayingCardPile
-        self._card_class = StandardPlayingCard
+        # self._card_pile_class = StandardPlayingCardPile
+        # self._card_class = StandardPlayingCard
         self.deck = StandardPlayingCardPile(make_standard_deck = True)
-        self._pass_type = 'NONE'
+        self.pass_type = 'NONE'
         super().__init__(**kwargs)        
 
     # def start(self):

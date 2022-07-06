@@ -24,8 +24,8 @@ class BaseCardRound(BaseClass):
 
     def __init__(self, **kwargs):
         self.state = self.ROUND_STATE["init"]
-        self._card_pile_class = BaseCardPile
-        self._card_class = BaseCard
+        # self._card_pile_class = BaseCardPile
+        # self._card_class = BaseCard
         self.players = []
         self.deck = BaseCardPile
         self.table_cards = BaseCardPile
